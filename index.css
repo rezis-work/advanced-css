@@ -1,3 +1,17 @@
+/* extremely basic formatting */
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -16,19 +30,27 @@ figure:nth-child(3) {
   display: block;
 }
 figure:last-child {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 
-/* extremely basic formatting */
-body {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  figure:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: grid;
+  }
 }
-img {
-  max-width: 100%;
-}
-figure {
-  margin: 0;
-  padding: 0;
+
+@media (max-width: 400px) {
+  figure {
+    display: block;
+  }
+  figure:nth-child(3) {
+    display: block;
+  }
 }

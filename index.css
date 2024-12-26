@@ -1,53 +1,29 @@
 /* extremely basic formatting */
-* {
+html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 body {
   font-family: "Libre Franklin", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  background-color: black;
 }
 img {
   max-width: 100%;
+  border-radius: 5px;
 }
-figure {
-  margin: 0;
-  padding: 0;
+.button {
+  background-color: #2d697c;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
-.grid-container {
-  width: 980px;
-  display: grid;
-  /* grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto; */
-  grid-template-areas:
-    "top top"
-    "mars rock1"
-    "mars rock2"
-    "bottom bottom";
-  align-items: center;
-  margin: auto;
-  gap: 1rem;
-}
-
-.galaxy-image:first-child {
-  grid-area: top;
-}
-
-.galaxy-image:nth-child(2) {
-  grid-area: mars;
-}
-
-.galaxy-image:nth-child(3) {
-  grid-area: bottom;
-}
-
-.galaxy-image:nth-child(4) {
-  grid-area: rock1;
-}
-
-.galaxy-image:last-child {
-  grid-area: rock2;
+.button:hover {
+  background-color: #327c94;
 }

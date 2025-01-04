@@ -77,7 +77,7 @@ img {
 
 /* media queries for 500 to 699 */
 
-@media (min-width: 500px) and (max-width: 699px) {
+@media (min-width: 500px) {
   .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -113,5 +113,17 @@ img {
 
   .card h2 {
     margin-bottom: 1rem;
+  }
+}
+
+/* media queries for 700 to 899 */
+
+@media (min-width: 700px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature {
+    grid-column: 1/4;
   }
 }

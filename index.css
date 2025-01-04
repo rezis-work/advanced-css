@@ -58,3 +58,19 @@ img {
   grid-column: 2/3;
   grid-row: 1/3;
 }
+
+/* feature card styles */
+
+.feature img {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.feature p:not(:has(a)) {
+  display: none;
+}
+
+.feature p:last-child {
+  grid-row: 3/4;
+  margin-top: 2rem;
+}

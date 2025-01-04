@@ -1,21 +1,27 @@
-/* extremely basic formatting */
-html {
+/* general styles */
+
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-*,
-*:before,
-*:after {
+
+*::before,
+*::after {
   box-sizing: inherit;
 }
+
 body {
   font-family: "Libre Franklin", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
+
 img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 5px;
 }
+
 .button {
   background-color: #2d697c;
   padding: 0.5rem;
@@ -24,6 +30,31 @@ img {
   text-decoration: none;
   font-size: 0.8rem;
 }
+
 .button:hover {
   background-color: #327c94;
+}
+
+/* card styles */
+
+.card {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 3rem 0;
+  border-bottom: 1px solid #ccc;
+  gap: 0;
+  align-items: center;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card img {
+  grid-column: 2/3;
+  grid-row: 1/3;
 }
